@@ -9,25 +9,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/arrow/config/common_full_phone.mk)
 
 # Inherit from lime device
 $(call inherit-product, device/xiaomi/lime/device.mk)
 
-PRODUCT_NAME := lineage_lime
+PRODUCT_NAME := arrow_lime
 PRODUCT_DEVICE := lime
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := M2010J19SG
-
-# RisingOS flags.
-RISING_MAINTAINER := scaledzdn.
-RISING_OFFICIAL := true
-RISING_CHIPSET := SD662
-TARGET_ENABLE_BLUR := false
-TARGET_HAS_UDFPS := false
-TARGET_USE_PIXEL_FINGERPRINT := false
-TARGET_OPTOUT_GOOGLE_TELEPHONY := true
-TARGET_FACE_UNLOCK_SUPPORTED := true
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
