@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/arrow_lime.mk
+    $(LOCAL_DIR)/lime.mk
 
 COMMON_LUNCH_CHOICES := \
-    arrow_lime-user \
-    arrow_lime-userdebug \
-    arrow_lime-eng
+    lime-user \
+    lime-userdebug \
+    lime-eng
