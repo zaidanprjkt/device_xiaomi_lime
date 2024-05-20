@@ -9,7 +9,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common AOSP stuff.
-$(call inherit-product, vendor/cherish/config/common_full_phone.mk)
+$(call inherit-product, vendor/blaze/config/common_full_phone.mk)
 
 # Bootanimation
 TARGET_BOOT_ANIMATION_RES := 1080
@@ -18,7 +18,7 @@ TARGET_BOOT_ANIMATION_RES := 1080
 $(call inherit-product, device/xiaomi/lime/device.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := cherish_lime
+PRODUCT_NAME := blaze_lime
 PRODUCT_DEVICE := lime
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi
@@ -28,16 +28,8 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 BUILD_FINGERPRINT := Redmi/lime_global/lime:12/SKQ1.211202.001/V13.0.3.0.SJQMIXM:user/release-keys
 
-# Cherish Flags
-WITH_GMS=false
-BUILD_WITH_GAPPS := false
-TARGET_BUILD_APERTURE_CAMERA := false
-CHERISH_VANILLA := true
-
-# Cherish props
-CHERISH_MAINTAINER := scaledzdn
-CHERISH_CHIPSET := SD660
-CHERISH_BATTERY := 6000mAh
-CHERISH_DISPLAY := 1080x2340
-
+# ProjectBlaze Flags
+WITH_GAPP := false
+BLAZE_MAINTAINER := scaledzdn
+TARGET_FACE_UNLOCK_SUPPORTED := true
 
